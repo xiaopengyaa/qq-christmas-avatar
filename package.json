@@ -1,0 +1,22 @@
+{
+  "name": "qq-christmas-avatar",
+  "version": "1.0.0",
+  "description": "给QQ头像戴上圣诞帽",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaopengyaa/qq-christmas-avatar.git"
+  },
+  "author": "xiaopengyaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaopengyaa/qq-christmas-avatar/issues"
+  },
+  "homepage": "https://github.com/xiaopengyaa/qq-christmas-avatar#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

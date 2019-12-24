@@ -1,0 +1,54 @@
+body {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+label {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 10px;
+}
+.header {
+  color: #108757;
+}
+#cvs {
+  display: none;
+  margin: 0 auto;
+}
+.canvas-container {
+  margin: 0 auto;
+}
+.hide,
+#exportBtn {
+  display: none;
+}
+.body {
+  margin: 4rem auto 3rem;
+  height: 10rem;
+  width: 10rem;
+  border: solid 1px #aaa;
+  box-shadow: 0 0 5px #aaa;
+  border-radius: 1rem;
+  line-height: 10rem;
+  position: relative;
+}
+#export {
+  display: none;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  font-size: 18px;
+  color: #fff;
+  padding: 0 30px;
+  height: 2.3rem;
+  background: #8fd16f;
+  border: 0;
+  border-radius: 20px;
+}
