@@ -8,18 +8,21 @@ var canvasFabric;
 var hatInstance;
 var screenWidth = window.screen.width < 500 ? window.screen.width : 300;
 
-loadImg()
+loadImg();
 
 function loadImg() {
-  // var url = 'http://q.qlogo.cn/headimg_dl?dst_uin=857763476&spec=640'
-  var url = ''
-  img.src = url
-  img.onload = function () {
+  if (!getQueryString("qq")) {
+    uploadContainer.style.display = "block";
+    return;
+  }
+  var url = "/src/avatar/" + getQueryString("qq") + ".jpg";
+  img.src = url;
+  img.onload = function() {
     img2Cvs(img);
   };
-  img.onerror = function () {
-    uploadContainer.style.display = 'block'
-  }
+  img.onerror = function() {
+    uploadContainer.style.display = "block";
+  };
 }
 
 function viewer() {
@@ -28,9 +31,9 @@ function viewer() {
   var reader = new FileReader();
   if (file) {
     reader.readAsDataURL(file);
-    reader.onload = function (e) {
+    reader.onload = function(e) {
       img.src = reader.result;
-      img.onload = function () {
+      img.onload = function() {
         img2Cvs(img);
       };
     };
@@ -96,4 +99,12 @@ function exportFunc() {
     width: screenWidth,
     height: screenWidth
   });
+}
+
+// 获取url参数
+function getQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]);
+  return null;
 }
